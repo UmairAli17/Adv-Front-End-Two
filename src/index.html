@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="eng">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>BookVent: Home</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--build:css styles/styles.min.css-->
+         <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+         <link rel="stylesheet" type="text/css" href="styles/styles.css">
+         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    	<!--endbuild-->
+    </head>
+    <body class="bg">
+          <div id="wrapper">
+            <header class="col-xs-12 col-sm-12">
+                <button type="button" class="btn btn-default navbar-btn" id="menu-toggle"><span class="glyphicon glyphicon-align-justify"></span></button>
+            </header>
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper">
+                <button type="button" class="btn btn-default navbar-btn pull-right" id="menu-close"><span class="glyphicon glyphicon-remove"></span></button>
+                <ul class="sidebar-nav">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="favourites.html">Favourites</a>
+                    </li>
+                </ul>
+            </div>
+           </div>
+        <!-- END Sidebar -->
+            <!-- Main Container -->
+            <div class="main-bg">
+            <div class="container-fluid">
+                <h1 class="logo"><span class="light">Book</span><span class="bold">Vent</span></h1>
+                    <form action="list.html">
+                        <input type="text" class="search-bar col-xs-12 col-sm-12" id="search" name="search" placeholder="Enter Author Here">
+                        <button class="glyphicon glyphicon-search search-icon" id="submit">
+                    </form>
+            </div>
+            </div>
+            <!-- End Main Container -->
+
+        <!--build:js scripts/main.min.js-->
+          <script src="scripts/jquery.min.js"></script>
+          <script src="scripts/bootstrap.min.js"></script>
+          <script src="scripts/menu.js"></script>
+          <script src="scripts/app.js"></script>
+          <script src="scripts/final.bundle.js"></script>
+        <!--endbuild-->
+    </body>
+</html>

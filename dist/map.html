@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="eng">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>BookVent: Location</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="styles/styles.min.css">
+    </head>
+    <body class="lightBg">
+          <div id="wrapper">
+            <header class="col-xs-12 col-sm-12">
+                <button type="button" class="btn btn-default navbar-btn" id="menu-toggle"><span class="glyphicon glyphicon-align-justify"></span></button>
+            </header>
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper">
+                <button type="button" class="btn btn-default navbar-btn pull-right" id="menu-close"><span class="glyphicon glyphicon-remove"></span></button>
+                <ul class="sidebar-nav">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="favourites.html">Favourites</a>
+                    </li>
+                </ul>
+            </div>
+           </div>
+            <!-- /#sidebar-wrapper -->
+
+            <!-- Main Container -->
+                <div class="col-xs-12 col-sm-12 content">
+                    <div class="col-xs-12">
+                        <h2>Brent Weeks: WhSmiths Signing Events</h2>
+                    </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d418.08944978363485!2d-1.7811453550569982!3d53.64570473402969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bdc72ffb934fd%3A0xa2da11ec53682992!2sWHSmith!5e0!3m2!1sen!2suk!4v1479839734030" id="map" allowfullscreen></iframe>
+                      <div class="tmode-bar pull-right">
+                        Mode of Travel
+                          <select id="mode">
+                              <option value="DRIVING">Driving</option>
+                              <option value="WALKING">Walking</option>
+                              <option value="BICYCLING">Bicycling</option>
+                              <option value="TRANSIT">Transit</option>
+                          </select>
+                      </div>
+                      <div class="col-xs-12 directions">
+                          <span class="glyphicon glyphicon glyphicon-road def-icon directions-travel-icon"></span>
+                          <li class="no-bullets">Turn Left<span class="directions-text-distance">200m</span></li>
+                          <li class="no-bullets">Turn Left<span class="directions-text-distance">120</span></li>
+                          <li class="no-bullets">Second Exit on Roundabout<span class="directions-text-distance">30m</span></li>
+                      </div>
+                    </div>
+            <!-- End Main Container -->
+
+            <!-- Footer -->
+            <a href="index.html"><footer>
+              <span class="glyphicon glyphicon-log-out"></span>
+              Back to Search
+            </footer></a>
+            <!-- End Footer -->
+          </div>
+
+        <script src="scripts/main.min.js"></script>
+    </body>
+</html>
