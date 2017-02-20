@@ -7,9 +7,9 @@ $(document).ready(function(){
 	
 
 	var trim = function(str) {
-		if(str==="" && isNaN(str))
+		if(str==="")
 		{
-			//do not validate
+			//do not validate as its empty
 			return false;
 		}
 		return true;
@@ -27,8 +27,8 @@ $(document).ready(function(){
 		if(trim($search_term))
 		{
 			//console.log($searchVal);
-			var searchedAuthors = authorModel.search_authors($search_term);
-			console.log(searchedAuthors);
+			searchedAuthors = authorModel.search_authors($search_term);
+			// console.log(searchedAuthors);
 
 			// also tried the following and it doesnt work..
 			// outputAuthors($searchedAuthors);

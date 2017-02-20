@@ -85,8 +85,17 @@ var searchAuthors = function(search_term){
 	$.getJSON("scripts/authors.json", function(authors){
 		$.each(authors, function(i, author) {
 			var $searchResults = $.grep(author, function(result){
-				return result.name.toLowerCase().indexOf(search_term.toLowerCase()) != -1
+				return result.name.indexOf(search_term.toLowerCase()) != -1
+				
+				// Also tried a case insensitive on the result.name to work success
+				// return result.name.toLowerCase().indexOf(search_term.toLowerCase()) != -1
+
+				//I also tried a string search - didn't work
+				// return result.name.search(search_term.toLowerCase()) != -1
+				$(this).push(result.name);
+				// console.log($(this));
 			});
+
 			return $searchResults;
 
 		});
@@ -131,9 +140,9 @@ $(document).ready(function(){
 	
 
 	var trim = function(str) {
-		if(str==="" && isNaN(str))
+		if(str==="")
 		{
-			//do not validate
+			//do not validate as its empty
 			return false;
 		}
 		return true;
@@ -151,8 +160,8 @@ $(document).ready(function(){
 		if(trim($search_term))
 		{
 			//console.log($searchVal);
-			var searchedAuthors = authorModel.search_authors($search_term);
-			console.log(searchedAuthors);
+			searchedAuthors = authorModel.search_authors($search_term);
+			// console.log(searchedAuthors);
 
 			// also tried the following and it doesnt work..
 			// outputAuthors($searchedAuthors);
