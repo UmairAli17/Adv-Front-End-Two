@@ -1,31 +1,47 @@
-function authorModel(){
+var getAllAuthors = function(){
 	$.getJSON("scripts/authors.json",function(authors){
        $.each(authors, function(i,author){
             console.log(author.name);
-        })
+        });
 
 
     });
 }
 
-module.exports={
-	author : authorModel 
+var searchAuthors = function(search_term){
+	var $searchResults = [];
+	$.getJSON("scripts/authors.json", function(authors){
+		$.each(authors, function(i, author) {
+			var $searchResults = $.grep(author, function(result){
+				return result.name.toLowerCase().indexOf(search_term.toLowerCase()) != -1
+			});
+			return $searchResults;
+
+		});
+	});
+	
 }
 
 
-// function authorsCall(callback){
-// 	$.getJSON("scripts/authors.json", function (callback = data) {
-// 		return $data;
+//ALSO TRIED WITH AN IF STATEMENT - NO SUCH LUCK - UNDEFINED
+// var searchAuthorsIf = function(search_term){
+// 	var searchResults = [];
+// 	$.getJSON("scripts/authors.json", function(authors){
+// 		$.each(authors, function(i, author) {
+// 			var searchResults = $.grep(author, function(result){
+// 				if(result.name.toLowerCase().indexOf(search_term.toLowerCase()) != -1){
+// 					searchResults.push(result.name);
+// 					console.log(searchResults);
+// 				}
+// 			});
+
+// 		});
 // 	});
+	
 // }
 
-// function authorModel(){
-// 	authorsCall(authors);
-//     $.each(authors, function(i,author){
-//         console.log(author.name);
-//     })
-// }
-
-// module.exports={
-// 	author : authorModel 
-// }
+module.exports={
+	author: getAllAuthors,
+	search_authors:  searchAuthors,
+	search_authors_if: searchAuthorsIf
+}

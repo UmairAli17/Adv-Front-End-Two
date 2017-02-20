@@ -63,20 +63,75 @@
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports) {
+
+var getAllAuthors = function(){
+	$.getJSON("scripts/authors.json",function(authors){
+       $.each(authors, function(i,author){
+            console.log(author.name);
+        });
+
+
+    });
+}
+
+var searchAuthors = function(search_term){
+	var $searchResults = [];
+	$.getJSON("scripts/authors.json", function(authors){
+		$.each(authors, function(i, author) {
+			var $searchResults = $.grep(author, function(result){
+				return result.name.toLowerCase().indexOf(search_term.toLowerCase()) != -1
+			});
+			return $searchResults;
+
+		});
+	});
+	
+}
+
+
+//ALSO TRIED WITH AN IF STATEMENT - NO SUCH LUCK - UNDEFINED
+// var searchAuthorsIf = function(search_term){
+// 	var searchResults = [];
+// 	$.getJSON("scripts/authors.json", function(authors){
+// 		$.each(authors, function(i, author) {
+// 			var searchResults = $.grep(author, function(result){
+// 				if(result.name.toLowerCase().indexOf(search_term.toLowerCase()) != -1){
+// 					searchResults.push(result.name);
+// 					console.log(searchResults);
+// 				}
+// 			});
+
+// 		});
+// 	});
+	
+// }
+
+module.exports={
+	author: getAllAuthors,
+	search_authors:  searchAuthors,
+	search_authors_if: searchAuthorsIf
+}
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var authors = __webpack_require__(1);
+var authorModel = __webpack_require__(0);
+
+$(document).ready(function(){
 
 	//Searchbox 
-	var $searchBox = $('#search');
+	var $searchBox = $("#search");
+	
 
 	var trim = function(str) {
-		if(!isNan(str) && str.val() === "")
+		if(str==="" && isNaN(str))
 		{
 			//do not validate
 			return false;
@@ -85,55 +140,45 @@ var authors = __webpack_require__(1);
 	}
 
 	var searchFunction = function(){
-		
+		//when something is entered into the searchbox then do:
+		$searchBox.keyup(function(e){
+			compSearch();
+		});
 	}
 
 	var compSearch = function(){
-		var $searchVal = $searchBox.val();
-		console.log($searchVal);
-		if(trim(searchVal))
+		var $search_term = $searchBox.val().toLowerCase();
+		if(trim($search_term))
 		{
-			console.log('You searched for'+$searchVal);
+			//console.log($searchVal);
+			var searchedAuthors = authorModel.search_authors($search_term);
+			console.log(searchedAuthors);
+
+			// also tried the following and it doesnt work..
+			// outputAuthors($searchedAuthors);
 		}
 	}
 
 
 
-/***/ }),
-/* 1 */
-/***/ (function(module, exports) {
+	var outputAuthors = function(authors){
+	   $.each(authors, function(author){
+	        console.log(author.name);
+	    })
+	}
 
-function authorModel(){
-	$.getJSON("scripts/authors.json",function(authors){
-       $.each(authors, function(i,author){
-            console.log(author.name);
-        })
+	//initialise the functions
+	var init = function(){
+		$searchBox.focus();
+		searchFunction();
+	}
 
-
-    });
-}
-
-module.exports={
-	author : authorModel 
-}
+	init();
 
 
-// function authorsCall(callback){
-// 	$.getJSON("scripts/authors.json", function (callback = data) {
-// 		return $data;
-// 	});
-// }
+});
 
-// function authorModel(){
-// 	authorsCall(authors);
-//     $.each(authors, function(i,author){
-//         console.log(author.name);
-//     })
-// }
 
-// module.exports={
-// 	author : authorModel 
-// }
 
 /***/ })
 /******/ ]);

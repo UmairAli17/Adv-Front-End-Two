@@ -44,12 +44,11 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var authors = __webpack_require__(1);
+	var authorModel = __webpack_require__(1);
 
 	$(document).ready(function(){
 
 		//Searchbox 
-		
 		var $searchBox = $("#search");
 		
 
@@ -64,18 +63,30 @@
 
 		var searchFunction = function(){
 			//when something is entered into the searchbox then do:
-			$searchBox.keydown(function(e){
+			$searchBox.keyup(function(e){
 				compSearch();
 			});
 		}
 
 		var compSearch = function(){
-			var $searchVal = $searchBox.val();
-			console.log($searchVal);
-			if(trim($searchVal))
+			var $search_term = $searchBox.val().toLowerCase();
+			if(trim($search_term))
 			{
-				//run here the query for searching through json
+				//console.log($searchVal);
+				var searchedAuthors = authorModel.search_authors($search_term);
+				console.log(searchedAuthors);
+
+				// also tried the following and it doesnt work..
+				// outputAuthors($searchedAuthors);
 			}
+		}
+
+
+
+		var outputAuthors = function(authors){
+		   $.each(authors, function(author){
+		        console.log(author.name);
+		    })
 		}
 
 		//initialise the functions
@@ -95,37 +106,49 @@
 /* 1 */
 /***/ function(module, exports) {
 
-	function authorModel(){
+	var getAllAuthors = function(){
 		$.getJSON("scripts/authors.json",function(authors){
 	       $.each(authors, function(i,author){
 	            console.log(author.name);
-	        })
+	        });
 
 
 	    });
 	}
 
-	module.exports={
-		author : authorModel 
+	var searchAuthors = function(search_term){
+		var $searchResults = [];
+		$.getJSON("scripts/authors.json", function(authors){
+			$.each(authors, function(i, author) {
+				var $searchResults = $.grep(author, function(result){
+					return result.name.toLowerCase().indexOf(search_term.toLowerCase()) != -1;
+				});
+				return $searchResults;
+
+			});
+		});
+		
 	}
 
+	var searchAuthorsIf = function(search_term){
+		var $searchResults = [];
+		$.getJSON("scripts/authors.json", function(authors){
+			$.each(authors, function(i, author) {
+				var $searchResults = $.grep(author, function(result){
+					return result.name.toLowerCase().indexOf(search_term.toLowerCase()) != -1;
+				});
+				return $searchResults;
 
-	// function authorsCall(callback){
-	// 	$.getJSON("scripts/authors.json", function (callback = data) {
-	// 		return $data;
-	// 	});
-	// }
+			});
+		});
+		
+	}
 
-	// function authorModel(){
-	// 	authorsCall(authors);
-	//     $.each(authors, function(i,author){
-	//         console.log(author.name);
-	//     })
-	// }
-
-	// module.exports={
-	// 	author : authorModel 
-	// }
+	module.exports={
+		author: getAllAuthors,
+		search_authors:  searchAuthors,
+		search_authors_if: searchAuthorsIf
+	}
 
 /***/ }
 /******/ ]);
