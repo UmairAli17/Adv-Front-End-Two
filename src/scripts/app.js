@@ -28,10 +28,7 @@ $(document).ready(function(){
 		{
 			//console.log($searchVal);
 			searchedAuthors = authorModel.search_authors($search_term);
-			// console.log(searchedAuthors);
-
-			// also tried the following and it doesnt work..
-			// outputAuthors($searchedAuthors);
+			//console.log(outputAuthors(searchedAuthors));
 		}
 	}
 

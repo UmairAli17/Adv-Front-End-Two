@@ -53,9 +53,9 @@
 		
 
 		var trim = function(str) {
-			if(str==="" && isNaN(str))
+			if(str==="")
 			{
-				//do not validate
+				//do not validate as its empty
 				return false;
 			}
 			return true;
@@ -73,11 +73,8 @@
 			if(trim($search_term))
 			{
 				//console.log($searchVal);
-				var searchedAuthors = authorModel.search_authors($search_term);
-				console.log(searchedAuthors);
-
-				// also tried the following and it doesnt work..
-				// outputAuthors($searchedAuthors);
+				searchedAuthors = authorModel.search_authors($search_term);
+				//console.log(outputAuthors(searchedAuthors));
 			}
 		}
 
@@ -106,6 +103,20 @@
 /* 1 */
 /***/ function(module, exports) {
 
+	/*TESTING */
+
+	/*function Author(name)
+	{
+		this.name=name;
+		this.year=year;
+	}
+	var authors=[];
+	authors.push(new Author("Brent Weeks"));
+	authors.push(new Author("Eoin Colfer"));*/
+
+
+
+
 	var getAllAuthors = function(){
 		$.getJSON("scripts/authors.json",function(authors){
 	       $.each(authors, function(i,author){
@@ -117,37 +128,21 @@
 	}
 
 	var searchAuthors = function(search_term){
-		var $searchResults = [];
+		var searchResults = [];
 		$.getJSON("scripts/authors.json", function(authors){
-			$.each(authors, function(i, author) {
-				var $searchResults = $.grep(author, function(result){
-					return result.name.toLowerCase().indexOf(search_term.toLowerCase()) != -1;
-				});
-				return $searchResults;
-
+			$.grep(authors, function(result, i){
+				if(result.name.toLowerCase().indexOf(search_term.toLowerCase()) != -1){
+					searchResults.push(result.name);
+					console.log(searchResults);
+				}
 			});
+			
 		});
-		
+
 	}
-
-	var searchAuthorsIf = function(search_term){
-		var $searchResults = [];
-		$.getJSON("scripts/authors.json", function(authors){
-			$.each(authors, function(i, author) {
-				var $searchResults = $.grep(author, function(result){
-					return result.name.toLowerCase().indexOf(search_term.toLowerCase()) != -1;
-				});
-				return $searchResults;
-
-			});
-		});
-		
-	}
-
 	module.exports={
 		author: getAllAuthors,
 		search_authors:  searchAuthors,
-		search_authors_if: searchAuthorsIf
 	}
 
 /***/ }

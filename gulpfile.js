@@ -14,14 +14,14 @@ var cache = require('gulp-cache');
 var webpack = require('webpack-stream');
 
 
-/*gulp.task('webpack', function() {
+gulp.task('webpack', function() {
   return gulp.src('src/entry.js')
     .pipe(webpack( require('./webpack.config.js') ))
     .pipe(browserSync.reload({
       stream: true
     }))
     .pipe(gulp.dest('src/scripts/'));
-});*/
+});
 
 
 //compile the sass
