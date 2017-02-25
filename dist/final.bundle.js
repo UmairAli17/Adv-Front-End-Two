@@ -70,47 +70,7 @@
 /* 0 */
 /***/ (function(module, exports) {
 
-/*TESTING */
-
-function Author(name)
-{
-	this.name=name;
-	this.year=year;
-}
-var authors=[];
-authors.push(new Author("Brent Weeks"));
-authors.push(new Author("Eoin Colfer"));
-
-
-
-
-var getAllAuthors = function(){
-	$.getJSON("scripts/authors.json",function(authors){
-       $.each(authors, function(i,author){
-            console.log(author.name);
-        });
-
-
-    });
-}
-
-var searchAuthors = function(search_term){
-	var searchResults = [];
-	$.getJSON("scripts/authors.json", function(authors){
-		$.grep(authors, function(result, i){
-			if(result.name.toLowerCase().search(search_term.toLowerCase()) != -1){
-				searchResults.push(result.name);
-				console.log(searchResults);
-			}
-		});
-
-	});
-
-}
-module.exports={
-	author: getAllAuthors,
-	search_authors:  searchAuthors,
-}
+throw new Error("Module parse failed: F:\\Front End\\T2\\Adv-Front-End-Two\\src\\scripts\\authorModel.js Unexpected token (32:19)\nYou may need an appropriate loader to handle this file type.\n| \t\tconsole.log(author);\r\n| \t\t//set the data as a cookie\r\n| \t\t$.cookie(\"author\": author);\r\n| \r\n| \t}\r");
 
 /***/ }),
 /* 1 */
@@ -135,31 +95,28 @@ $(document).ready(function(){
 
 	var searchFunction = function(){
 		//when something is entered into the searchbox then do:
-		$searchBox.keyup(function(e){
+		$searchBox.keydown(function(e){
 			compSearch();
 		});
 	}
 
+		
+
 	var compSearch = function(){
 		var $search_term = $searchBox.val().toLowerCase();
-		if(trim($search_term))
+		if($search_term)
 		{
 			//console.log($searchVal);
 			searchedAuthors = authorModel.search_authors($search_term);
-			// console.log(searchedAuthors);
-
-			// also tried the following and it doesnt work..
-			// outputAuthors($searchedAuthors);
 		}
 	}
 
+	/*var outputAuthors = function(authors){
+	   	$.each(authors, function(i, r){
+			$output.append("<ul>"+"<li>" + r + "</li>"+ "</ul>");
+    	});
+	}*/
 
-
-	var outputAuthors = function(authors){
-	   $.each(authors, function(author){
-	        console.log(author.name);
-	    })
-	}
 
 	//initialise the functions
 	var init = function(){
