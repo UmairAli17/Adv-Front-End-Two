@@ -12,7 +12,7 @@
 				"lat": 53.645633, 
 				"lng": -1.780882
 			}
-		]
+			]
 	},
 
 	{
@@ -21,13 +21,13 @@
 		"img_url": "https://en.wikipedia.org/wiki/File:Eoin_Colfer.jpg",
 		"author_description": "​Eoin Colfer (pronounced Owen) was born in Wexford on the South-East coast of Ireland in 1965, where he and his four brothers were brought up by his father (an elementary school teacher, historian and artist of note) and mother (a drama teacher). He first developed an interest in writing in primary (elementary) school with gripping Viking stories inspired by history he was learning in school at the time!",
 		"events":[
-			{
-				"event_id": 1,
-				"event_name": "Arnotts WhSmith Fantasy",
-				"event location": "Fantasy Anotts" ,
-				"lat": 53.348820, 
-				"lng": -6.262757
-			}
-		]
+				{
+					"event_id": 1,
+					"event_name": "Arnotts WhSmith Fantasy",
+					"event location": "Fantasy Anotts" ,
+					"lat": 53.348820, 
+					"lng": -6.262757
+				}
+			]
 	}
 ]	

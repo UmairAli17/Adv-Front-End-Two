@@ -48,7 +48,7 @@ loadAuthorProfile = function(author)
 			if(result.name.toLowerCase().indexOf(search_term.toLowerCase()) !== -1){
 				searchResults.push(result);
 				//console.log(searchResults);
-				$output.empty();
+				// $output.empty();
 				//display each result in a list
 			}			
 		});

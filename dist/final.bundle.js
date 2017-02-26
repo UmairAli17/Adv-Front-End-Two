@@ -70,7 +70,88 @@
 /* 0 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: F:\\Front End\\T2\\Adv-Front-End-Two\\src\\scripts\\authorModel.js Unexpected token (32:19)\nYou may need an appropriate loader to handle this file type.\n| \t\tconsole.log(author);\r\n| \t\t//set the data as a cookie\r\n| \t\t$.cookie(\"author\": author);\r\n| \r\n| \t}\r");
+var $output = $(".output");
+var $siteUrl = window.location.href;
+
+getAllAuthors = function(){
+	$.getJSON("scripts/authors.json",function(authors){
+       $.each(authors, function(i,author){
+            console.log(author.name);
+        });
+
+
+    });
+}
+
+loadPage = function(redirectUrl)
+{
+
+	window.location.href = redirectUrl;
+}
+
+showAuthorData = function()
+{
+	//load profile page
+	loadPage("profiles.html");
+	//console.log(localStorage.getItem('authors'));
+	author = $.parseJSON(localStorage["authors"]);
+	console.log(author.name);
+	$(".prof-name").append(author.name);
+}
+
+loadAuthorProfile = function(author)
+{
+	return function(){
+		console.log(author);
+		if (typeof(sessionStorage) != 'undefined' ) {
+		    localStorage.setItem('authors', JSON.stringify(author));
+		}
+		else {
+		    console.log('Oh dear.. we may not work on your device :(')
+		}
+	}
+}
+
+ searchAuthors = function(search_term){
+	$output.empty();
+	var searchResults = [];
+	$.getJSON("scripts/authors.json", function(authors){
+		$.grep(authors, function(result, i){
+			if(result.name.toLowerCase().indexOf(search_term.toLowerCase()) !== -1){
+				searchResults.push(result.name);
+				//console.log(searchResults);
+				//display each result in a list
+			}			
+		});
+	});
+	return searchResults;
+}
+
+
+/**WORKING SEARCH ***/
+
+/*
+var searchAuthors = function(search_term){
+	$output.empty();
+	var searchResults = [];
+		$.grep(authors, function(result, i){
+			if(result.name.toLowerCase().indexOf(search_term.toLowerCase()) !== -1){
+				searchResults.push(result);
+				console.log(searchResults);
+				$output.empty();
+				//display each result in a list
+				 $.each(searchResults, function(i, res) {
+				 	var $res_line = $("<li class='author_search_det'>"+res.name+"</li>").click(loadAuthorProfile(res))
+				 	$output.prepend($res_line);
+				 });
+			}			
+		});
+}
+*/
+module.exports={
+	author: getAllAuthors,
+	searchAuthors:  searchAuthors
+}
 
 /***/ }),
 /* 1 */
@@ -82,6 +163,8 @@ $(document).ready(function(){
 
 	//Searchbox 
 	var $searchBox = $("#search");
+	var $output = $(".output");
+
 	
 
 	var trim = function(str) {
@@ -99,29 +182,61 @@ $(document).ready(function(){
 			compSearch();
 		});
 	}
-
-		
+	
 
 	var compSearch = function(){
 		var $search_term = $searchBox.val().toLowerCase();
-		if($search_term)
+		if(trim($search_term))
 		{
-			//console.log($searchVal);
-			searchedAuthors = authorModel.search_authors($search_term);
+			
+			var searchedAuthors = authorModel.searchAuthors($search_term.toLowerCase());
+			outputAuthors(searchedAuthors);
 		}
 	}
 
-	/*var outputAuthors = function(authors){
-	   	$.each(authors, function(i, r){
-			$output.append("<ul>"+"<li>" + r + "</li>"+ "</ul>");
-    	});
-	}*/
+
+	var outputAuthors = function(searchResults){
+		$.each(searchResults, function(i, res) {
+			var $res_line = $("<li class='author_search_det'>"+searchResults.name+"</li>").click(loadAuthorProfile(searchResults))
+			$output.prepend($res_line);
+		});
+	}
+
+	loadAuthorProfile = function(author)
+	{
+		return function(){
+			console.log(author);
+			if (typeof(sessionStorage) != 'undefined' ) {
+			    localStorage.setItem('authors', JSON.stringify(author));
+			}
+			else {
+			    console.log('Oh dear.. we may not work on your device :(')
+			}
+		}
+	}
+
+	loadPage = function(redirectUrl)
+	{
+
+		window.location.href = redirectUrl;
+	}
+
+	showAuthorData = function()
+	{
+		//load profile page
+		loadPage("profiles.html");
+		//console.log(localStorage.getItem('authors'));
+		author = $.parseJSON(localStorage["authors"]);
+		console.log(author.name);
+		$(".prof-name").append(author.name);
+	}
 
 
 	//initialise the functions
 	var init = function(){
 		$searchBox.focus();
 		searchFunction();
+
 	}
 
 	init();

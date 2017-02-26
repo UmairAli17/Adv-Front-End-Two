@@ -23,10 +23,7 @@ $(document).ready(function(){
 			compSearch();
 		});
 	}
-
-
-
-		
+	
 
 	var compSearch = function(){
 		var $search_term = $searchBox.val().toLowerCase();
@@ -40,10 +37,10 @@ $(document).ready(function(){
 
 
 	var outputAuthors = function(searchResults){
-		$.each(searchResults, function(i, res) {
-			var $res_line = $("<li class='author_search_det'>"+res.name+"</li>").click(loadAuthorProfile(res))
+		//$.each(searchResults, function(i, res) {
+			var $res_line = $("<li class='author_search_det'>"+searchResults.name+"</li>").click(loadAuthorProfile(searchResults))
 			$output.prepend($res_line);
-		});
+		//});
 	}
 
 	loadAuthorProfile = function(author)
