@@ -29,26 +29,32 @@ $(document).ready(function(){
 		var $search_term = $searchBox.val().toLowerCase();
 		if(trim($search_term))
 		{
-			
 			var searchedAuthors = authorModel.searchAuthors($search_term.toLowerCase());
+			// console.log(searchedAuthors);
 			outputAuthors(searchedAuthors);
 		}
 	}
 
 
 	var outputAuthors = function(searchResults){
-		//$.each(searchResults, function(i, res) {
-			var $res_line = $("<li class='author_search_det'>"+searchResults.name+"</li>").click(loadAuthorProfile(searchResults))
+
+		// var authors = $.map(searchResults, function(index, author) {
+		// 	console.log(author.name);
+		// })
+		// var searchResults = [];
+		// $.each(searchResults, function(index, res) {
+			var $res_line = $("<a href='profiles.html'><li class='author_search_det'>"+searchResults.name+"</li></a>").click(loadAuthorProfile(searchResults))
 			$output.prepend($res_line);
-		//});
+		// });
+		// return searchResults;
 	}
 
-	loadAuthorProfile = function(author)
+	var loadAuthorProfile = function(author)
 	{
 		return function(){
-			console.log(author);
-			if (typeof(sessionStorage) != 'undefined' ) {
+			if (typeof(localStorage) != 'undefined' ) {
 			    localStorage.setItem('authors', JSON.stringify(author));
+			    showAuthorData();
 			}
 			else {
 			    console.log('Oh dear.. we may not work on your device :(')
@@ -56,20 +62,25 @@ $(document).ready(function(){
 		}
 	}
 
-	loadPage = function(redirectUrl)
+	var loadPage = function(redirectUrl)
 	{
 
 		window.location.href = redirectUrl;
 	}
 
-	showAuthorData = function()
+	var showAuthorData = function()
 	{
 		//load profile page
-		loadPage("profiles.html");
-		//console.log(localStorage.getItem('authors'));
-		author = $.parseJSON(localStorage["authors"]);
-		console.log(author.name);
-		$(".prof-name").append(author.name);
+		var author = $.parseJSON(localStorage.getItem('authors'));
+		console.log(author[0].events[0].event_name);
+		var author_name = author[0].name;
+		var author_description = author[0].author_description;
+		var img = author[0].img_url;
+		var event_name = author[0].events[0].event_name;
+		$(".prof-name").append(author_name);
+		$(".prof-desc").append(author_description);
+		$(".prof-large-img").attr("src", img);
+		//show events...
 	}
 
 
@@ -77,6 +88,7 @@ $(document).ready(function(){
 	var init = function(){
 		$searchBox.focus();
 		searchFunction();
+		showAuthorData();
 
 	}
 
