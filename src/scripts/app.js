@@ -5,6 +5,7 @@ $(document).ready(function(){
 	//Searchbox 
 	var $searchBox = $("#search");
 	var $output = $(".output");
+	    var gAuthors;
 
 	
 
@@ -30,24 +31,17 @@ $(document).ready(function(){
 		if(trim($search_term))
 		{
 			var searchedAuthors = authorModel.searchAuthors($search_term.toLowerCase());
-			// console.log(searchedAuthors);
 			outputAuthors(searchedAuthors);
 		}
 	}
 
 
 	var outputAuthors = function(searchResults){
-
-		// var authors = $.map(searchResults, function(index, author) {
-		// 	console.log(author.name);
-		// })
-		// var searchResults = [];
-		// $.each(searchResults, function(index, res) {
-			var $res_line = $("<a href='profiles.html'><li class='author_search_det'>"+searchResults.name+"</li></a>").click(loadAuthorProfile(searchResults))
-			$output.prepend($res_line);
-		// });
-		// return searchResults;
-	}
+			 $.each(searchResults, function(index, res) {
+				var $res_line = $("<a href='profiles.html'><li class='author_search_det'>"+res.name+"</li></a>").click(loadAuthorProfile(res))
+				$output.prepend($res_line);
+			 });
+		}
 
 	var loadAuthorProfile = function(author)
 	{
@@ -72,11 +66,10 @@ $(document).ready(function(){
 	{
 		//load profile page
 		var author = $.parseJSON(localStorage.getItem('authors'));
-		console.log(author[0].events[0].event_name);
-		var author_name = author[0].name;
-		var author_description = author[0].author_description;
-		var img = author[0].img_url;
-		var event_name = author[0].events[0].event_name;
+		var author_name = author.name;
+		var author_description = author.author_description;
+		var img = author.img_url;
+		var event_name = author.events.event_name;
 		$(".prof-name").append(author_name);
 		$(".prof-desc").append(author_description);
 		$(".prof-large-img").attr("src", img);
@@ -87,13 +80,13 @@ $(document).ready(function(){
 	//initialise the functions
 	var init = function(){
 		$searchBox.focus();
+		//Get all authors and push into array
+		authorModel.getAllAuthors();
 		searchFunction();
 		showAuthorData();
-
 	}
 
 	init();
 
 
 });
-
