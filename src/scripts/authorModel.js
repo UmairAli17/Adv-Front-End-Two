@@ -19,8 +19,8 @@ var gAuthors;
 
 			});
 		return searchResults;			
-
-	}	
+	}
+		
 module.exports={
 	getAllAuthors: getAllAuthors,
 	searchAuthors:  searchAuthors

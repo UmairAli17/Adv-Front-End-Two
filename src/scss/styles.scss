@@ -386,8 +386,11 @@ body{
 }
 
 .prof-marker{
-    transform: translate(0%, 33%);
     @include gliphy-center-circle(#FFFFFF, 2.5em, $accent-colour);
+    position: relative;
+    right: 1em;
+    top: 1.5em;
+    z-index: 1000;
 }
 
 .event-details{
@@ -470,6 +473,7 @@ footer{
   padding: 1em;
   letter-spacing: .25em;
   @include text(1em, center, #fff);
+  z-index: 10000;
 }
 
 footer:hover, footer:active{

@@ -102,10 +102,16 @@
 			}
 		}
 
-		var loadPage = function(redirectUrl)
+		var listAuthorEvents = function(author)
 		{
-
-			window.location.href = redirectUrl;
+			var events = author.events;
+			$.each(events, function(index, event) {
+				var evBox = $("<div class='col-xs-12 col-sm-12 prof-item'><div class='col-xs-10 col-offset-1 col-sm-10 col-sm-offset-1 event-details'><li class='no-bullets'>"+" "+event.event_name+"</li><li class='no-bullets'>"+"Location:"+event.event_location+"</li></div><a href='favourites.html'><span class='glyphicon glyphicon-star add'></span></a></div>");
+				var marker = $("<a class='location-marker' href='map.html'><div class='col-xs-2 col-sm-12 btn-rm'><span class='glyphicon glyphicon-map-marker prof-marker'></span></div></a>").click(eventLocationMap(event))
+				$(".prof-list").append(marker, evBox);
+				
+			});
+			
 		}
 
 		var showAuthorData = function()
@@ -115,18 +121,24 @@
 			var author_name = author.name;
 			var author_description = author.author_description;
 			var img = author.img_url;
-			var event_name = author.events.event_name;
 			$(".prof-name").append(author_name);
 			$(".prof-desc").append(author_description);
 			$(".prof-large-img").attr("src", img);
-			//show events...
+			listAuthorEvents(author);
+		}
+
+		var eventLocationMap = function(e)
+		{
+			return function(){
+				console.log(e.event_name);
+			}
 		}
 
 
 		//initialise the functions
 		var init = function(){
 			$searchBox.focus();
-			//Get all authors and push into array
+			// Get all authors through jSon and push into array
 			authorModel.getAllAuthors();
 			searchFunction();
 			showAuthorData();
@@ -162,8 +174,8 @@
 
 				});
 			return searchResults;			
-
-		}	
+		}
+			
 	module.exports={
 		getAllAuthors: getAllAuthors,
 		searchAuthors:  searchAuthors
