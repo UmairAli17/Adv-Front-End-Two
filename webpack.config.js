@@ -8,7 +8,7 @@ var config = {
     app: __dirname + '/src/scripts/app.js',
   },
   output: {
-    path: __dirname + '/dist', // `dist` is the destination
+    path: __dirname + '/src/scripts', // `dist` is the destination
     filename: 'final.bundle.js',
   },
   watch: true

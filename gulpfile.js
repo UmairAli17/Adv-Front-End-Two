@@ -8,7 +8,7 @@ var uglify = require('gulp-uglify');
 var gulpIf = require('gulp-if');
 var cssnano = require('gulp-cssnano');
 var runSequence = require('run-sequence');
-//var imagemin = require('gulp-imagemin');
+var imagemin = require('gulp-imagemin');
 var del = require('del');
 var cache = require('gulp-cache');
 var webpack = require('webpack-stream');
@@ -83,10 +83,17 @@ gulp.task('watch', ['browserSync', 'sass', 'webpack'], function(){
 
 
 
+gulp.task('json', function() {
+  return gulp.src('src/scripts/*.json')
+    .pipe(gulp.dest('dist/scripts'));
+});
+
+
+
 //the following will run all the below tasks in the order they are written. items in [] will run in parallel
 gulp.task('build', function (callback) {
   runSequence('clean:dist',
-    ['sass', /*'webpack', */'useref', 'images', 'fonts'],
+    ['sass', 'useref', 'images', 'fonts', 'json'],
     callback
   )
 })

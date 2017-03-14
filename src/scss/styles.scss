@@ -354,9 +354,10 @@ body{
     @include gliphy-center-circle(inherit, 2.25em, $accent-colour);
     background: #fff;
     z-index: 500;
-    position:absolute;
-    top:-0.25em;
-    right:-0.25em;
+    position: relative;
+    z-index: 1000;
+    left: 8em;
+    top: .75em;
 }
 
 .header-text{
