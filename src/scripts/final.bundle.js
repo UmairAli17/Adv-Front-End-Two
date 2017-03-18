@@ -141,15 +141,18 @@
 
 		var showAuthorData = function()
 		{
-			//load profile page
-			var author = $.parseJSON(localStorage.getItem('authors'));
-			var author_name = author.name;
-			var author_description = author.author_description;
-			var img = author.img_url;
-			$(".prof-name").append(author_name);
-			$(".prof-desc").append(author_description);
-			$(".prof-large-img").attr("src", img);
-			listAuthorEvents(author);
+			if(localStorage.getItem('authors') != null)
+			{
+				//load profile page
+				var author = $.parseJSON(localStorage.getItem('authors'));
+				var author_name = author.name;
+				var author_description = author.author_description;
+				var img = author.img_url;
+				$(".prof-name").append(author_name);
+				$(".prof-desc").append(author_description);
+				$(".prof-large-img").attr("src", img);
+				listAuthorEvents(author);
+			}
 		}
 
 		var eventLocationMap = function(event)
@@ -168,11 +171,14 @@
 
 	    var showEventData = function()
 		{
-			//load event page
-			var event = $.parseJSON(localStorage.getItem('events'));
-			var event_name = event.event_name;
-			$(".event-title").append(event_name)
-			initMap(event);
+			if(localStorage.getItem('events') != null)
+			{
+				var event = $.parseJSON(localStorage.getItem('events'));
+				var event_name = event.event_name;
+				$(".event-title").append(event_name)
+				initMap(event);
+			}
+
 		}
 
 		var addToFavourites = function(event)
@@ -194,11 +200,7 @@
 
 		var displayFavourites = function()
 		{
-			if(localStorage.getItem('favourites') === null)
-			{
-				console.log('Nothing Added to favourites')
-			}
-			else
+			if(localStorage.getItem('favourites') != null)
 			{
 				var favourites = $.parseJSON(localStorage.getItem('favourites'));
 				var filteredFavs = favourites.filter(function(itm, i, e) 
@@ -245,6 +247,7 @@
 		}
 
 		init();
+		window.initMap = initMap;
 
 	});
 
