@@ -220,22 +220,47 @@
 		}
 
 		var initMap = function(event)
-		{
-			var coordinates = {lat: event.lat, lng: event.lng};
-	        var map = new google.maps.Map($("#map")[0], {
-	          zoom: 15,
-	          center: coordinates
-	        });
-	        var marker = new google.maps.Marker({
-	          position: coordinates,
-	          map: map
-	        });
+		{	
+			var event_coords = {lat: event.lat, lng: event.lng};
+			navigator.geolocation.getCurrentPosition(function (position) { 
+	        	//Get the user's current location!
+			    var lat = position.coords.latitude;                    
+			    var long = position.coords.longitude;                 
+			    var coords = new google.maps.LatLng(lat, long); /*Set Variable for map*/
 
-	    }
+			    var directionsService = new google.maps.DirectionsService();
+			    var directionsDisplay = new google.maps.DirectionsRenderer();
+			  
+			    var map = new google.maps.Map($("#map")[0], {
+		          zoom: 15,
+		          center: coords
+		        });
+		  
+	  
+		     	directionsDisplay.setMap(map);
+			    var request = {
+			       origin:coords, 
+			       destination: event_coords,
+			       travelMode: google.maps.TravelMode.DRIVING,
+			     };
+
+			    directionsService.route(request, function (response, status) {
+			       if (status == google.maps.DirectionsStatus.OK) {
+			        	directionsDisplay.setDirections(response);
+			    	}
+			    });         
+			 
+			    directionsService.route(request, function(response, status) {
+			    	if (status == google.maps.DirectionsStatus.OK) {
+			        	directionsDisplay.setDirections(response);
+			        }
+			    });
+
+			});
+		}
 
 		//initialise the functions
 		var init = function(){
-
 			$searchBox.focus();
 			// Get all authors through jSon and push into array
 			authorModel.getAllAuthors();
