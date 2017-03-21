@@ -63,7 +63,7 @@ $(document).ready(function(){
 	/**
 	 * [loadAuthorProfile description]
 	 * @param  {[object]} author [author objects]
-	 * @return {[type]}        [callback]
+	 * @return {[object]}        [callback]
 	 */
 	var loadAuthorProfile = function(author)
 	{
@@ -86,7 +86,7 @@ $(document).ready(function(){
 		$.each(events, function(index, event) {
 			var evBox = $("<div class='col-xs-12 col-sm-12 prof-item'><div class='col-xs-10 col-offset-1 col-sm-10 col-sm-offset-1 event-details'><li class='no-bullets'>"+" "+event.event_name+"</li><li class='no-bullets'>"+"Location:"+event.event_location+"</li></div></div>");
 			var marker = $("<a class='location-marker' href='map.html'><div class='col-xs-2 col-sm-12 btn-rm'><span class='glyphicon glyphicon-map-marker prof-marker'></span></div></a>").click(eventLocationMap(event))
-			var favs = $("<div class='col-xs-2 col-sm-12 btn-rm'><span class='glyphicon glyphicon-star add'></span></div>").click(addToFavourites(event));
+            var favs = $("<a href='favourites.html'><div class='col-xs-2 col-sm-12 btn-rm'><span class='glyphicon glyphicon-star add'></span></div></a>").click(addToFavourites(event));
 			$(".prof-list").prepend(marker,  favs, evBox);
 			
 		});
@@ -146,11 +146,34 @@ $(document).ready(function(){
 			//send it that array
 			currentFavs.push(newFav);
 			localStorage.setItem('favourites', JSON.stringify(currentFavs));
-			//send to the favourites
-			window.location.href = "/favourites.html";
+		}
+	}
+
+	var removeFromFavourites = function (event) 
+	{
+		return function()
+		{
+			if(localStorage.getItem('favourites') != null)
+			{
+				var favEvents = getFavsArray();
+				var uniqueID = favEvents.indexOf(event.event_id);
+				if(uniqueID === -1) 
+				{
+					favEvents.splice(uniqueID, 1);
+				}
+				localStorage.setItem("favourites", JSON.stringify(favEvents))
+				location.reload();
+			}
+
 		}
 	}
     
+    //Get all the favourites and push into an array
+    var getFavsArray = function()
+    {
+    	var currentFavs = JSON.parse(localStorage.getItem('favourites')) || [];
+    	return currentFavs;
+	}
 
 	var displayFavourites = function()
 	{
@@ -169,7 +192,8 @@ $(document).ready(function(){
 	{
 		var output = $.each(loop, function(index, e) {
 	    	var favBox = $("<div class='media'><div class='media-body'><h4 class='media-right'>Location: " + e.event_name +"</h4></div>");
-	        $(".list-content-items").append(favBox);
+	        var del = $("<div class='list-remove'><span class='glyphicon glyphicon-remove'></span></div>").click(removeFromFavourites(e.event_id));
+	        $(".list-content-items").append(del,favBox);
 	    });
 	}
 
