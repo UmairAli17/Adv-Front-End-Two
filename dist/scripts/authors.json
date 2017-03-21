@@ -17,8 +17,8 @@
 				"event_id": 2,
 				"event_name": "Dewsbury Fantasy: Brent Weeks",
 				"event_location": "Waterstones: Dewsbury" ,
-				"lat": 53.645633, 
-				"lng": -1.780882
+				"lat": 53.690679, 
+				"lng": -1.628202
 			}
 		]
 	},
@@ -31,7 +31,7 @@
 		"events":
 		[
 			{
-				"event_id": 1,
+				"event_id": 3,
 				"event_name": "Arnotts WhSmith Fantasy",
 				"event_location": "Fantasy Anotts" ,
 				"lat": 53.348820, 
