@@ -1,5 +1,4 @@
 var $output = $(".output");
-var $siteUrl = window.location.href;
 var gAuthors;
 
 	getAllAuthors = function(){

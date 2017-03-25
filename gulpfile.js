@@ -13,17 +13,6 @@ var del = require('del');
 var cache = require('gulp-cache');
 var webpack = require('webpack-stream');
 
-
-gulp.task('webpack', function() {
-  return gulp.src('src/entry.js')
-    .pipe(webpack( require('./webpack.config.js') ))
-    .pipe(browserSync.reload({
-      stream: true
-    }))
-    .pipe(gulp.dest('src/scripts/'));
-});
-
-
 //compile the sass
 gulp.task('sass', function() {
   return gulp.src('src/scss/**/*.scss') // Gets all files ending with .scss in src/scss
@@ -73,7 +62,7 @@ gulp.task('clean:dist', function() {
   return del.sync('dist');
 })
 
-gulp.task('watch', ['browserSync', 'sass', 'webpack'], function(){
+gulp.task('watch', ['browserSync', 'sass'], function(){
   gulp.watch('src/scss/**/*.scss', ['sass']);
   // Other watchers
   // Reloads the browser whenever HTML or JS files change

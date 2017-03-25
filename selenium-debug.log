@@ -1,0 +1,45 @@
+19:54:47.707 INFO - Launching a standalone Selenium Server
+19:54:47.777 INFO - Java: Oracle Corporation 25.121-b13
+19:54:47.777 INFO - OS: Windows 10 10.0 x86
+19:54:47.784 INFO - v2.53.0, with Core v2.53.0. Built from revision 35ae25b
+19:54:47.820 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+19:54:47.821 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+19:54:47.825 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
+registration capabilities Capabilities [{browserName=safari, version=, platform=MAC}] does not match the current platform WIN10
+19:54:47.825 INFO - Driver class not found: org.openqa.selenium.htmlunit.HtmlUnitDriver
+19:54:47.825 INFO - Driver provider org.openqa.selenium.htmlunit.HtmlUnitDriver is not registered
+19:54:47.914 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+19:54:47.914 INFO - Selenium Server is up and running
+19:54:48.102 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Author Search, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+19:54:48.114 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Author Search, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.28.455520 (cc17746adff54984afff480136733114c6b3704b) on port 11905
+Only local connections are allowed.
+19:54:50.653 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Author Search, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+19:54:50.661 INFO - Executing: [get: http://localhost:8080/src/])
+19:54:51.309 INFO - Done: [get: http://localhost:8080/src/]
+19:54:51.315 INFO - Executing: [find elements: By.cssSelector: body])
+19:54:51.345 INFO - Done: [find elements: By.cssSelector: body]
+19:54:51.347 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (c3dfa641530de0f8df4769b7a4dc27d2)] -> css selector: body]])
+19:54:51.372 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (c3dfa641530de0f8df4769b7a4dc27d2)] -> css selector: body]]
+19:54:51.379 INFO - Executing: [find element: By.cssSelector: input[type=text]])
+19:54:51.396 INFO - Done: [find element: By.cssSelector: input[type=text]]
+19:54:51.398 INFO - Executing: [is displayed: 1 [[ChromeDriver: chrome on XP (c3dfa641530de0f8df4769b7a4dc27d2)] -> css selector: input[type=text]]])
+19:54:51.412 INFO - Done: [is displayed: 1 [[ChromeDriver: chrome on XP (c3dfa641530de0f8df4769b7a4dc27d2)] -> css selector: input[type=text]]]
+19:54:51.416 INFO - Executing: [find element: By.cssSelector: input[type=text]])
+19:54:51.422 INFO - Done: [find element: By.cssSelector: input[type=text]]
+19:54:51.425 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on XP (c3dfa641530de0f8df4769b7a4dc27d2)] -> css selector: input[type=text]], [B, r, e, n]])
+19:54:51.463 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on XP (c3dfa641530de0f8df4769b7a4dc27d2)] -> css selector: input[type=text]], [B, r, e, n]]
+19:54:51.468 INFO - Executing: [find elements: By.cssSelector: .author_search_det])
+19:54:51.484 INFO - Done: [find elements: By.cssSelector: .author_search_det]
+19:54:51.486 INFO - Executing: [is displayed: 2 [[ChromeDriver: chrome on XP (c3dfa641530de0f8df4769b7a4dc27d2)] -> css selector: .author_search_det]])
+19:54:51.500 INFO - Done: [is displayed: 2 [[ChromeDriver: chrome on XP (c3dfa641530de0f8df4769b7a4dc27d2)] -> css selector: .author_search_det]]
+19:54:51.504 INFO - Executing: [find element: By.cssSelector: .author_search_det])
+19:54:51.519 INFO - Done: [find element: By.cssSelector: .author_search_det]
+19:54:51.521 INFO - Executing: [click: 2 [[ChromeDriver: chrome on XP (c3dfa641530de0f8df4769b7a4dc27d2)] -> css selector: .author_search_det]])
+19:54:52.164 INFO - Done: [click: 2 [[ChromeDriver: chrome on XP (c3dfa641530de0f8df4769b7a4dc27d2)] -> css selector: .author_search_det]]
+19:54:53.177 INFO - Executing: [find element: By.cssSelector: .prof-name])
+19:54:53.239 INFO - Done: [find element: By.cssSelector: .prof-name]
+19:54:53.248 INFO - Executing: [get text: 3 [[ChromeDriver: chrome on XP (c3dfa641530de0f8df4769b7a4dc27d2)] -> css selector: .prof-name]])
+19:54:53.291 INFO - Done: [get text: 3 [[ChromeDriver: chrome on XP (c3dfa641530de0f8df4769b7a4dc27d2)] -> css selector: .prof-name]]
+19:54:53.294 INFO - Executing: [delete session: 809c37c3-f348-489d-9d83-ccd8f86d3c50])
+19:54:54.060 INFO - Done: [delete session: 809c37c3-f348-489d-9d83-ccd8f86d3c50]

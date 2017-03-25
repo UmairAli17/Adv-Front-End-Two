@@ -5,7 +5,9 @@ $(document).ready(function(){
 	//Searchbox 
 	var $searchBox = $("#search");
 	var $output = $(".output");
-	var gAuthors;
+
+
+	
 
 	
 	/**
@@ -246,7 +248,10 @@ $(document).ready(function(){
 		displayFavourites();
 		showAuthorData();
 		showEventData();
-		
+		$('.go-back').click(function(){
+	        parent.history.back();
+	        return false;
+    	});
 	}
 
 	init();

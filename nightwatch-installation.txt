@@ -1,0 +1,34 @@
+1.  Install Java
+
+2. Install Nightwatch Global
+
+npm install nightwatch -g
+
+2A. Install it locally
+
+npm install nightwatch --save-dev
+
+3. Add these to scripts in package.json:
+"postinstall": "node nightwatch.conf.js",
+    "test": "./node_modules/.bin/nightwatch --env local",
+    "ie": "./node_modules/.bin/nightwatch -e ie11",
+    "sauce": "./node_modules/.bin/nightwatch -e chrome,ie11,android_s4_emulator,iphone_6_simulator",
+    "upload": "node test/e2e/upload_screenshots_to_s3.js",
+    "e2e": "node_modules/.bin/nightwatch --config nightwatch.conf.js",
+    "dev": "./node_modules/.bin/nodemon -w test/index.html --delay 250ms --exec 'npm run upload'"
+
+4. Add dependencies json obj:
+"dependencies": {
+    "chromedriver": "^2.28.0",
+    "selenium-download": "^2.0.9"
+  },
+
+5. Add to devDependencies:
+"aws-sdk": "^2.7.13",
+    "env2": "^2.1.1",
+    "mime-types": "^2.1.13",
+    "nodemon": "^1.11.0"
+
+6. Run npm install
+
+7. Run Nightwatch
