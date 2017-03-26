@@ -199,14 +199,20 @@ $(document).ready(function(){
 	    });
 	}
 
+
+	/**
+	 * [initMap Draw Map - Get Current User Position with GeoLocation and then Map the Destination from Local Storage]
+	 * @param  {[type]} event [object from local storage]
+	 * @return {[type]}       [draw map]
+	 */
 	var initMap = function(event)
 	{	
 		var event_coords = {lat: event.lat, lng: event.lng};
 		navigator.geolocation.getCurrentPosition(function (position) { 
-        	//Get the user's current location!
+        
 		    var lat = position.coords.latitude;                    
 		    var long = position.coords.longitude;                 
-		    var coords = new google.maps.LatLng(lat, long); /*Set Variable for map*/
+		    var coords = new google.maps.LatLng(lat, long);
 
 		    var directionsService = new google.maps.DirectionsService();
 		    var directionsDisplay = new google.maps.DirectionsRenderer();
@@ -229,12 +235,7 @@ $(document).ready(function(){
 		        	directionsDisplay.setDirections(response);
 		    	}
 		    });         
-		 
-		    directionsService.route(request, function(response, status) {
-		    	if (status == google.maps.DirectionsStatus.OK) {
-		        	directionsDisplay.setDirections(response);
-		        }
-		    });
+
 
 		});
 	}
@@ -248,6 +249,7 @@ $(document).ready(function(){
 		displayFavourites();
 		showAuthorData();
 		showEventData();
+		
 		$('.go-back').click(function(){
 	        parent.history.back();
 	        return false;
