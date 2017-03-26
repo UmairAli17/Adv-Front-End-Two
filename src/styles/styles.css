@@ -99,7 +99,18 @@ body {
 .go-back {
   position: absolute;
   top: 5em;
-  left: 2em; }
+  left: 2em;
+  background: #FF5252; }
+
+.author_search_det {
+  list-style-type: none;
+  padding: 1em 1em 1.75em 1em;
+  color: #FF5252;
+  font-size: 1.25em; }
+
+.output {
+  margin-top: -30px;
+  background: #fff; }
 
 /***FORM ELEMENT CSS***/
 .search-bar {
