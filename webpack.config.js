@@ -3,14 +3,24 @@ var path = require('path');
 
 
 var config = {
-  context: __dirname + '/src', // `__dirname` is root of project and `src` is source
+  // I set the root of the project to '/src/' as that is where I am developing it
+  context: __dirname + '/src',
+
   entry: {
-    app: __dirname + '/src/scripts/app.js',
+  	//this is the file that will be bundled
+    // app: __dirname + '/src/scripts/app.js',
+    search: __dirname + '/src/scripts/search.js',
+    profile: __dirname + '/src/scripts/profile.js',
+    map: __dirname + '/src/scripts/map.js',
+    favourites: __dirname + '/src/scripts/favourites.js'
   },
   output: {
-    path: __dirname + '/src/scripts', // `dist` is the destination
-    filename: 'final.bundle.js',
+  	//this is the folder where the final bundled file will be saved 
+    path: __dirname + '/src/scripts', 
+    //the name specified for the final bundle
+    filename: "[name].bundle.js"
   },
+  //Watch for any changes
   watch: true
 };
 

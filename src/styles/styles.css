@@ -97,10 +97,11 @@ body {
   letter-spacing: .25em; }
 
 .go-back {
-  position: absolute;
-  top: 5em;
-  left: 2em;
-  background: #FF5252; }
+  position: fixed;
+  top: .5em;
+  right: 1.25em;
+  background: #FF5252;
+  z-index: 1000000; }
 
 .author_search_det {
   list-style-type: none;
@@ -147,7 +148,7 @@ body {
 
 #sidebar-wrapper {
   overflow: hidden;
-  z-index: 1000;
+  z-index: 999999;
   position: fixed;
   left: 250px;
   width: 0;

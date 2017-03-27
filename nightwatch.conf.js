@@ -35,7 +35,7 @@ module.exports = {
         "javascriptEnabled" : true,
         "acceptSslCerts" : true,
         "chromeOptions" : {
-          "args" : ["start-fullscreen"]
+          "args" : ["window-size=412,732", "disable-web-security"]
         }
       }
     }

@@ -38,5 +38,29 @@
 				"lng": -6.262757
 			}
 		]
+	},
+
+	{
+		"id": 3,
+		"name": "Brandon Sanderson",
+		"img_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Brandon_Sanderson_sign.jpg",
+		"author_description": "Brandon Sanderson (born December 19, 1975) is an American fantasy and science fiction writer. He is best known for his Mistborn series and his work in finishing Robert Jordan's epic fantasy series The Wheel of Time. In 2010, Sanderson published The Way of Kings, the first of a ten-book series called The Stormlight Archive.",
+		"events":
+		[
+			{
+				"event_id": 4,
+				"event_name": "Stories in London",
+				"event_location": "London WhSmiths: High Fantasy" ,
+				"lat": 51.522528, 
+				"lng": -0.162603
+			},
+			{
+				"event_id": 5,
+				"event_name": "CLC: Bookish",
+				"event_location": "CLC Bookshop: Birmingham" ,
+				"lat": 52.479455, 
+				"lng": -1.893370
+			}
+		]
 	}
 ]	

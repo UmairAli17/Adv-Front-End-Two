@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="4">
+
+  <testsuite name="authorSearch"
+    errors="0" failures="0" hostname="" id="" package="authorSearch" skipped="0"
+    tests="4" time="18.67" timestamp="Mon, 27 Mar 2017 17:17:04 GMT">
+  
+    <testcase name="Test Author Search With Valid Input" classname="authorSearch" time="6.394" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Test Author Search with Valid Input but no Author Stored" classname="authorSearch" time="4.209" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Test Author Search with No Input" classname="authorSearch" time="4.035" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Test Author Search with Invalid Input" classname="authorSearch" time="4.034" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+  
+  </testsuite>
+</testsuites>
