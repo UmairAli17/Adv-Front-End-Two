@@ -353,9 +353,7 @@ module.exports={
 var authorModel = __webpack_require__(3);
 var profile = __webpack_require__(2);
 
-$(document).ready(function(){
-
-	//Searchbox 
+//Searchbox 
 	var $searchBox = $("#search");
 	var $output = $(".output");
 
@@ -366,7 +364,7 @@ $(document).ready(function(){
 	 * @return {[type]}     [description]
 	 */
 	var trim = function(str) {
-		if(str==="" && isNaN(str))
+		if(str==="" && !isNaN(str))
 		{
 			//do not validate as its empty
 			return false;
@@ -412,9 +410,6 @@ $(document).ready(function(){
 		});
 	}
 
-	
-
-
 	var init = function(){
 		$searchBox.focus();
 		// Get all authors through jSon and push into array
@@ -426,6 +421,8 @@ $(document).ready(function(){
     	});
 	}
 
+
+$(document).ready(function(){
 	init();
 });
 
