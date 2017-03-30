@@ -62,5 +62,52 @@
 				"lng": -1.893370
 			}
 		]
+	},
+
+	{
+		"id": 4,
+		"name": "James Patterson",
+		"img_url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/James_Patterson.jpg",
+		"author_description": "James Patterson has created more enduring fictional characters than any other novelist writing today with his Alex Cross, Michael Bennett, Women's Murder Club, Private, NYPD Red, Daniel X, Maximum Ride, and Middle School series. As of January 2016, he has sold over 350 million books worldwide and currently holds the Guinness World Record for the most #1 New York Times bestsellers. In addition to writing the thriller novels for which he is best known, he also writes children's, middle-grade, and young-adult fiction and is also the first author to have #1 new titles simultaneously on the New York Times adult and children's bestsellers lists.",
+		"events":
+		[
+			{
+				"event_id": 6,
+				"event_name": "Book Depot",
+				"event_location": "Leeds, Birstall: Books" ,
+				"lat": 53.712862, 
+				"lng": -1.62519
+			},
+			{
+				"event_id": 7,
+				"event_name": "WhSmith: Bookcon",
+				"event_location": "Leeds: WhSmith" ,
+				"lat": 53.756890, 
+				"lng":  -1.570016
+			}
+		]
+	},
+	{
+		"id": 5,
+		"name": "Jim Butcher",
+		"img_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Jim_Butcher_crop.jpg",
+		"author_description": "Jim Butcher is the author of the Dresden Files, the Codex Alera, and a new steampunk series, the Cinder Spires. His resume includes a laundry list of skills which were useful a couple of centuries ago, and he plays guitar quite badly. An avid gamer, he plays tabletop games in varying systems, a variety of video games on PC and console, and LARPs whenever he can make time for it. Jim currently resides mostly inside his own head, but his head can generally be found in his home town of Independence, Missouri.",
+		"events":
+		[
+			{
+				"event_id": 8,
+				"event_name": "Angry Con",
+				"event_location": "Nottingham: Angry Robot" ,
+				"lat": 52.950258, 
+				"lng": -1.147097
+			},
+			{
+				"event_id": 9,
+				"event_name": "Wisecon",
+				"event_location": "Nottingham: Wisebooks" ,
+				"lat": 52.953751, 
+				"lng":  -1.142220
+			}
+		]
 	}
 ]	
