@@ -36,36 +36,43 @@
 			Set the event coordinates (lat, lng) to an object: event_coords
 		 */
 		var event_coords = {lat: event.lat, lng: event.lng};
-		navigator.geolocation.getCurrentPosition(function (position) { 
+		if(navigator.geolocation)
+		{
+			navigator.geolocation.getCurrentPosition(function (position) { 
         
-		    var lat = position.coords.latitude;                    
-		    var long = position.coords.longitude;                 
-		    var coords = new google.maps.LatLng(lat, long);
+			    var lat = position.coords.latitude;                    
+			    var long = position.coords.longitude;                 
+			    var coords = new google.maps.LatLng(lat, long);
 
-		    var directionsService = new google.maps.DirectionsService();
-		    var directionsDisplay = new google.maps.DirectionsRenderer();
+			    var directionsService = new google.maps.DirectionsService();
+			    var directionsDisplay = new google.maps.DirectionsRenderer();
+			  
+			    var map = new google.maps.Map($("#map")[0], {
+		          zoom: 15,
+		          center: coords
+		        });
 		  
-		    var map = new google.maps.Map($("#map")[0], {
-	          zoom: 15,
-	          center: coords
-	        });
 	  
-  
-	     	directionsDisplay.setMap(map);
-		    var request = {
-		       origin:coords, 
-		       destination: event_coords,
-		       travelMode: google.maps.TravelMode.DRIVING,
-		     };
+		     	directionsDisplay.setMap(map);
+			    var request = {
+			       origin:coords, 
+			       destination: event_coords,
+			       travelMode: google.maps.TravelMode.DRIVING,
+			     };
 
-		    directionsService.route(request, function (response, status) {
-		       if (status == google.maps.DirectionsStatus.OK) {
-		        	directionsDisplay.setDirections(response);
-		    	}
-		    });         
+			    directionsService.route(request, function (response, status) {
+			       if (status == google.maps.DirectionsStatus.OK) {
+			        	directionsDisplay.setDirections(response);
+			    	}
+		    	});         
 
 
-		});
+			});
+		}
+		else
+		{
+			console.log('Looks like your device does not support Google Map Geolocation');
+		}
 	}
 
 	var init = function ()
