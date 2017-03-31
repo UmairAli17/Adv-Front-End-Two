@@ -14,7 +14,7 @@ var profile = require('./profile.js');
 	var trim = function(str) {
 		if(str==="" && !isNaN(str))
 		{
-			//do not validate as its empty
+			//do not validate as its empty and a number
 			return false;
 		}
 		return true;
