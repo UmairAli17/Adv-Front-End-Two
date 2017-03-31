@@ -1,114 +1,114 @@
-17:19:16.351 INFO - Launching a standalone Selenium Server
-17:19:16.426 INFO - Java: Oracle Corporation 25.121-b13
-17:19:16.427 INFO - OS: Windows 10 10.0 x86
-17:19:16.434 INFO - v2.53.0, with Core v2.53.0. Built from revision 35ae25b
-17:19:16.474 INFO - Driver class not found: com.opera.core.systems.OperaDriver
-17:19:16.475 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
-17:19:16.479 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
+20:03:10.465 INFO - Launching a standalone Selenium Server
+20:03:10.612 INFO - Java: Oracle Corporation 25.121-b13
+20:03:10.612 INFO - OS: Windows 10 10.0 x86
+20:03:10.618 INFO - v2.53.0, with Core v2.53.0. Built from revision 35ae25b
+20:03:10.718 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+20:03:10.718 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+20:03:10.749 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
 registration capabilities Capabilities [{browserName=safari, version=, platform=MAC}] does not match the current platform WIN10
-17:19:16.479 INFO - Driver class not found: org.openqa.selenium.htmlunit.HtmlUnitDriver
-17:19:16.479 INFO - Driver provider org.openqa.selenium.htmlunit.HtmlUnitDriver is not registered
-17:19:16.571 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
-17:19:16.571 INFO - Selenium Server is up and running
-17:19:16.769 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Author Search, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
-17:19:16.781 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Author Search, browserName=chrome, javascriptEnabled=true, platform=ANY}]
-Starting ChromeDriver 2.28.455520 (cc17746adff54984afff480136733114c6b3704b) on port 9015
+20:03:10.749 INFO - Driver class not found: org.openqa.selenium.htmlunit.HtmlUnitDriver
+20:03:10.749 INFO - Driver provider org.openqa.selenium.htmlunit.HtmlUnitDriver is not registered
+20:03:10.881 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+20:03:10.881 INFO - Selenium Server is up and running
+20:03:11.265 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Author Search, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+20:03:11.281 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Author Search, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.28.455520 (cc17746adff54984afff480136733114c6b3704b) on port 20910
 Only local connections are allowed.
-17:19:18.961 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Author Search, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
-17:19:18.971 INFO - Executing: [get: https://umairali17.github.io/Adv-Front-End-Two/dist/])
-17:19:19.519 INFO - Done: [get: https://umairali17.github.io/Adv-Front-End-Two/dist/]
-17:19:19.524 INFO - Executing: [find elements: By.cssSelector: body])
-17:19:19.555 INFO - Done: [find elements: By.cssSelector: body]
-17:19:19.558 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (d6f7c0d363c7d0a4e8f4281a12aebce1)] -> css selector: body]])
-17:19:19.573 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (d6f7c0d363c7d0a4e8f4281a12aebce1)] -> css selector: body]]
-17:19:19.580 INFO - Executing: [find element: By.cssSelector: input[type=text]])
-17:19:19.593 INFO - Done: [find element: By.cssSelector: input[type=text]]
-17:19:19.595 INFO - Executing: [is displayed: 1 [[ChromeDriver: chrome on XP (d6f7c0d363c7d0a4e8f4281a12aebce1)] -> css selector: input[type=text]]])
-17:19:19.610 INFO - Done: [is displayed: 1 [[ChromeDriver: chrome on XP (d6f7c0d363c7d0a4e8f4281a12aebce1)] -> css selector: input[type=text]]]
-17:19:19.612 INFO - Executing: [find element: By.cssSelector: input[type=text]])
-17:19:19.619 INFO - Done: [find element: By.cssSelector: input[type=text]]
-17:19:19.622 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on XP (d6f7c0d363c7d0a4e8f4281a12aebce1)] -> css selector: input[type=text]], [B, r, e, n]])
-17:19:19.671 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on XP (d6f7c0d363c7d0a4e8f4281a12aebce1)] -> css selector: input[type=text]], [B, r, e, n]]
-17:19:19.675 INFO - Executing: [find elements: By.cssSelector: .author_search_det])
-17:19:19.693 INFO - Done: [find elements: By.cssSelector: .author_search_det]
-17:19:19.696 INFO - Executing: [is displayed: 2 [[ChromeDriver: chrome on XP (d6f7c0d363c7d0a4e8f4281a12aebce1)] -> css selector: .author_search_det]])
-17:19:19.710 INFO - Done: [is displayed: 2 [[ChromeDriver: chrome on XP (d6f7c0d363c7d0a4e8f4281a12aebce1)] -> css selector: .author_search_det]]
-17:19:19.713 INFO - Executing: [find element: By.cssSelector: .author_search_det])
-17:19:19.728 INFO - Done: [find element: By.cssSelector: .author_search_det]
-17:19:19.730 INFO - Executing: [click: 2 [[ChromeDriver: chrome on XP (d6f7c0d363c7d0a4e8f4281a12aebce1)] -> css selector: .author_search_det]])
-17:19:19.973 INFO - Done: [click: 2 [[ChromeDriver: chrome on XP (d6f7c0d363c7d0a4e8f4281a12aebce1)] -> css selector: .author_search_det]]
-17:19:20.986 INFO - Executing: [find element: By.cssSelector: .prof-name])
-17:19:21.020 INFO - Done: [find element: By.cssSelector: .prof-name]
-17:19:21.024 INFO - Executing: [get text: 3 [[ChromeDriver: chrome on XP (d6f7c0d363c7d0a4e8f4281a12aebce1)] -> css selector: .prof-name]])
-17:19:21.041 INFO - Done: [get text: 3 [[ChromeDriver: chrome on XP (d6f7c0d363c7d0a4e8f4281a12aebce1)] -> css selector: .prof-name]]
-17:19:21.045 INFO - Executing: [delete session: f7e6d7cb-0696-4918-a0c4-004bb1574339])
-17:19:21.767 INFO - Done: [delete session: f7e6d7cb-0696-4918-a0c4-004bb1574339]
-17:19:21.776 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Author Search, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
-17:19:21.777 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Author Search, browserName=chrome, javascriptEnabled=true, platform=ANY}]
-Starting ChromeDriver 2.28.455520 (cc17746adff54984afff480136733114c6b3704b) on port 12497
+20:03:13.821 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Author Search, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+20:03:13.836 INFO - Executing: [get: https://umairali17.github.io/Adv-Front-End-Two/src/])
+20:03:14.574 INFO - Done: [get: https://umairali17.github.io/Adv-Front-End-Two/src/]
+20:03:14.581 INFO - Executing: [find elements: By.cssSelector: body])
+20:03:14.642 INFO - Done: [find elements: By.cssSelector: body]
+20:03:14.645 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (da1e9f1b8903de441b6df9f7defdf984)] -> css selector: body]])
+20:03:14.666 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (da1e9f1b8903de441b6df9f7defdf984)] -> css selector: body]]
+20:03:14.666 INFO - Executing: [find element: By.cssSelector: input[type=text]])
+20:03:14.697 INFO - Done: [find element: By.cssSelector: input[type=text]]
+20:03:14.697 INFO - Executing: [is displayed: 1 [[ChromeDriver: chrome on XP (da1e9f1b8903de441b6df9f7defdf984)] -> css selector: input[type=text]]])
+20:03:14.725 INFO - Done: [is displayed: 1 [[ChromeDriver: chrome on XP (da1e9f1b8903de441b6df9f7defdf984)] -> css selector: input[type=text]]]
+20:03:14.725 INFO - Executing: [find element: By.cssSelector: input[type=text]])
+20:03:14.741 INFO - Done: [find element: By.cssSelector: input[type=text]]
+20:03:14.741 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on XP (da1e9f1b8903de441b6df9f7defdf984)] -> css selector: input[type=text]], [B, r, e, n]])
+20:03:14.788 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on XP (da1e9f1b8903de441b6df9f7defdf984)] -> css selector: input[type=text]], [B, r, e, n]]
+20:03:14.793 INFO - Executing: [find elements: By.cssSelector: .author_search_det])
+20:03:14.809 INFO - Done: [find elements: By.cssSelector: .author_search_det]
+20:03:14.812 INFO - Executing: [is displayed: 2 [[ChromeDriver: chrome on XP (da1e9f1b8903de441b6df9f7defdf984)] -> css selector: .author_search_det]])
+20:03:14.825 INFO - Done: [is displayed: 2 [[ChromeDriver: chrome on XP (da1e9f1b8903de441b6df9f7defdf984)] -> css selector: .author_search_det]]
+20:03:14.828 INFO - Executing: [find element: By.cssSelector: .author_search_det])
+20:03:14.843 INFO - Done: [find element: By.cssSelector: .author_search_det]
+20:03:14.846 INFO - Executing: [click: 2 [[ChromeDriver: chrome on XP (da1e9f1b8903de441b6df9f7defdf984)] -> css selector: .author_search_det]])
+20:03:15.112 INFO - Done: [click: 2 [[ChromeDriver: chrome on XP (da1e9f1b8903de441b6df9f7defdf984)] -> css selector: .author_search_det]]
+20:03:16.124 INFO - Executing: [find element: By.cssSelector: .prof-name])
+20:03:16.165 INFO - Done: [find element: By.cssSelector: .prof-name]
+20:03:16.165 INFO - Executing: [get text: 3 [[ChromeDriver: chrome on XP (da1e9f1b8903de441b6df9f7defdf984)] -> css selector: .prof-name]])
+20:03:16.196 INFO - Done: [get text: 3 [[ChromeDriver: chrome on XP (da1e9f1b8903de441b6df9f7defdf984)] -> css selector: .prof-name]]
+20:03:16.196 INFO - Executing: [delete session: 3efbc4e7-691c-44fc-b2e9-66f4d8ff364a])
+20:03:17.033 INFO - Done: [delete session: 3efbc4e7-691c-44fc-b2e9-66f4d8ff364a]
+20:03:17.035 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Author Search, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+20:03:17.035 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Author Search, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.28.455520 (cc17746adff54984afff480136733114c6b3704b) on port 27649
 Only local connections are allowed.
-17:19:23.621 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Author Search, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
-17:19:23.626 INFO - Executing: [get: https://umairali17.github.io/Adv-Front-End-Two/dist/])
-17:19:23.912 INFO - Done: [get: https://umairali17.github.io/Adv-Front-End-Two/dist/]
-17:19:23.914 INFO - Executing: [find elements: By.cssSelector: body])
-17:19:23.942 INFO - Done: [find elements: By.cssSelector: body]
-17:19:23.945 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (f5022ac24d7b98eca5481b72bc9877f2)] -> css selector: body]])
-17:19:23.962 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (f5022ac24d7b98eca5481b72bc9877f2)] -> css selector: body]]
-17:19:23.965 INFO - Executing: [find element: By.cssSelector: input[type=text]])
-17:19:23.980 INFO - Done: [find element: By.cssSelector: input[type=text]]
-17:19:23.983 INFO - Executing: [is displayed: 1 [[ChromeDriver: chrome on XP (f5022ac24d7b98eca5481b72bc9877f2)] -> css selector: input[type=text]]])
-17:19:24.001 INFO - Done: [is displayed: 1 [[ChromeDriver: chrome on XP (f5022ac24d7b98eca5481b72bc9877f2)] -> css selector: input[type=text]]]
-17:19:24.004 INFO - Executing: [find element: By.cssSelector: input[type=text]])
-17:19:24.011 INFO - Done: [find element: By.cssSelector: input[type=text]]
-17:19:24.018 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on XP (f5022ac24d7b98eca5481b72bc9877f2)] -> css selector: input[type=text]], [H, a, w]])
-17:19:24.059 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on XP (f5022ac24d7b98eca5481b72bc9877f2)] -> css selector: input[type=text]], [H, a, w]]
-17:19:24.062 INFO - Executing: [find elements: By.cssSelector: .author_search_det])
-17:19:24.077 INFO - Done: [find elements: By.cssSelector: .author_search_det]
-17:19:25.084 INFO - Executing: [delete session: 17b4bd76-0c8c-4393-bece-021383b20427])
-17:19:25.759 INFO - Done: [delete session: 17b4bd76-0c8c-4393-bece-021383b20427]
-17:19:25.769 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Author Search, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
-17:19:25.769 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Author Search, browserName=chrome, javascriptEnabled=true, platform=ANY}]
-Starting ChromeDriver 2.28.455520 (cc17746adff54984afff480136733114c6b3704b) on port 19762
+20:03:18.966 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Author Search, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+20:03:18.966 INFO - Executing: [get: https://umairali17.github.io/Adv-Front-End-Two/src/])
+20:03:19.422 INFO - Done: [get: https://umairali17.github.io/Adv-Front-End-Two/src/]
+20:03:19.424 INFO - Executing: [find elements: By.cssSelector: body])
+20:03:19.445 INFO - Done: [find elements: By.cssSelector: body]
+20:03:19.447 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (d0bece660738881845ae3e38720f15d7)] -> css selector: body]])
+20:03:19.462 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (d0bece660738881845ae3e38720f15d7)] -> css selector: body]]
+20:03:19.465 INFO - Executing: [find element: By.cssSelector: input[type=text]])
+20:03:19.479 INFO - Done: [find element: By.cssSelector: input[type=text]]
+20:03:19.482 INFO - Executing: [is displayed: 1 [[ChromeDriver: chrome on XP (d0bece660738881845ae3e38720f15d7)] -> css selector: input[type=text]]])
+20:03:19.484 INFO - Done: [is displayed: 1 [[ChromeDriver: chrome on XP (d0bece660738881845ae3e38720f15d7)] -> css selector: input[type=text]]]
+20:03:19.484 INFO - Executing: [find element: By.cssSelector: input[type=text]])
+20:03:19.500 INFO - Done: [find element: By.cssSelector: input[type=text]]
+20:03:19.500 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on XP (d0bece660738881845ae3e38720f15d7)] -> css selector: input[type=text]], [H, a, w]])
+20:03:19.548 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on XP (d0bece660738881845ae3e38720f15d7)] -> css selector: input[type=text]], [H, a, w]]
+20:03:19.550 INFO - Executing: [find elements: By.cssSelector: .author_search_det])
+20:03:19.565 INFO - Done: [find elements: By.cssSelector: .author_search_det]
+20:03:20.573 INFO - Executing: [delete session: 10220e4d-9c10-4bc7-b837-2b8ad4d6aa24])
+20:03:21.358 INFO - Done: [delete session: 10220e4d-9c10-4bc7-b837-2b8ad4d6aa24]
+20:03:21.363 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Author Search, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+20:03:21.379 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Author Search, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.28.455520 (cc17746adff54984afff480136733114c6b3704b) on port 8455
 Only local connections are allowed.
-17:19:27.654 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Author Search, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
-17:19:27.657 INFO - Executing: [get: https://umairali17.github.io/Adv-Front-End-Two/dist/])
-17:19:27.969 INFO - Done: [get: https://umairali17.github.io/Adv-Front-End-Two/dist/]
-17:19:27.972 INFO - Executing: [find elements: By.cssSelector: body])
-17:19:27.993 INFO - Done: [find elements: By.cssSelector: body]
-17:19:27.995 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (31584150660c71865f61bdc8f5d7b76e)] -> css selector: body]])
-17:19:28.010 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (31584150660c71865f61bdc8f5d7b76e)] -> css selector: body]]
-17:19:28.015 INFO - Executing: [find element: By.cssSelector: input[type=text]])
-17:19:28.031 INFO - Done: [find element: By.cssSelector: input[type=text]]
-17:19:28.033 INFO - Executing: [is displayed: 1 [[ChromeDriver: chrome on XP (31584150660c71865f61bdc8f5d7b76e)] -> css selector: input[type=text]]])
-17:19:28.047 INFO - Done: [is displayed: 1 [[ChromeDriver: chrome on XP (31584150660c71865f61bdc8f5d7b76e)] -> css selector: input[type=text]]]
-17:19:28.052 INFO - Executing: [find element: By.cssSelector: input[type=text]])
-17:19:28.058 INFO - Done: [find element: By.cssSelector: input[type=text]]
-17:19:28.060 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on XP (31584150660c71865f61bdc8f5d7b76e)] -> css selector: input[type=text]], []])
-17:19:28.093 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on XP (31584150660c71865f61bdc8f5d7b76e)] -> css selector: input[type=text]], []]
-17:19:28.097 INFO - Executing: [find elements: By.cssSelector: .author_search_det])
-17:19:28.114 INFO - Done: [find elements: By.cssSelector: .author_search_det]
-17:19:29.119 INFO - Executing: [delete session: 07062684-15d7-4482-b4b4-76109f2cca13])
-17:19:29.769 INFO - Done: [delete session: 07062684-15d7-4482-b4b4-76109f2cca13]
-17:19:29.777 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Author Search, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
-17:19:29.778 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Author Search, browserName=chrome, javascriptEnabled=true, platform=ANY}]
-Starting ChromeDriver 2.28.455520 (cc17746adff54984afff480136733114c6b3704b) on port 6415
+20:03:23.276 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Author Search, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+20:03:23.276 INFO - Executing: [get: https://umairali17.github.io/Adv-Front-End-Two/src/])
+20:03:23.674 INFO - Done: [get: https://umairali17.github.io/Adv-Front-End-Two/src/]
+20:03:23.677 INFO - Executing: [find elements: By.cssSelector: body])
+20:03:23.696 INFO - Done: [find elements: By.cssSelector: body]
+20:03:23.698 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (18a4ecf340acdcac6f1f44153b05efdb)] -> css selector: body]])
+20:03:23.711 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (18a4ecf340acdcac6f1f44153b05efdb)] -> css selector: body]]
+20:03:23.715 INFO - Executing: [find element: By.cssSelector: input[type=text]])
+20:03:23.730 INFO - Done: [find element: By.cssSelector: input[type=text]]
+20:03:23.732 INFO - Executing: [is displayed: 1 [[ChromeDriver: chrome on XP (18a4ecf340acdcac6f1f44153b05efdb)] -> css selector: input[type=text]]])
+20:03:23.733 INFO - Done: [is displayed: 1 [[ChromeDriver: chrome on XP (18a4ecf340acdcac6f1f44153b05efdb)] -> css selector: input[type=text]]]
+20:03:23.749 INFO - Executing: [find element: By.cssSelector: input[type=text]])
+20:03:23.749 INFO - Done: [find element: By.cssSelector: input[type=text]]
+20:03:23.749 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on XP (18a4ecf340acdcac6f1f44153b05efdb)] -> css selector: input[type=text]], []])
+20:03:23.776 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on XP (18a4ecf340acdcac6f1f44153b05efdb)] -> css selector: input[type=text]], []]
+20:03:23.776 INFO - Executing: [find elements: By.cssSelector: .author_search_det])
+20:03:23.792 INFO - Done: [find elements: By.cssSelector: .author_search_det]
+20:03:24.807 INFO - Executing: [delete session: 26bf0134-4399-4dd2-9648-9f0400314f6e])
+20:03:25.510 INFO - Done: [delete session: 26bf0134-4399-4dd2-9648-9f0400314f6e]
+20:03:25.510 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Author Search, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+20:03:25.510 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Author Search, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.28.455520 (cc17746adff54984afff480136733114c6b3704b) on port 35554
 Only local connections are allowed.
-17:19:31.623 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Author Search, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
-17:19:31.625 INFO - Executing: [get: https://umairali17.github.io/Adv-Front-End-Two/dist/])
-17:19:31.912 INFO - Done: [get: https://umairali17.github.io/Adv-Front-End-Two/dist/]
-17:19:31.917 INFO - Executing: [find elements: By.cssSelector: body])
-17:19:31.946 INFO - Done: [find elements: By.cssSelector: body]
-17:19:31.948 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (a9c12422f66a95bee3d489b1004d716f)] -> css selector: body]])
-17:19:31.962 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (a9c12422f66a95bee3d489b1004d716f)] -> css selector: body]]
-17:19:31.965 INFO - Executing: [find element: By.cssSelector: input[type=text]])
-17:19:31.985 INFO - Done: [find element: By.cssSelector: input[type=text]]
-17:19:31.987 INFO - Executing: [is displayed: 1 [[ChromeDriver: chrome on XP (a9c12422f66a95bee3d489b1004d716f)] -> css selector: input[type=text]]])
-17:19:32.003 INFO - Done: [is displayed: 1 [[ChromeDriver: chrome on XP (a9c12422f66a95bee3d489b1004d716f)] -> css selector: input[type=text]]]
-17:19:32.007 INFO - Executing: [find element: By.cssSelector: input[type=text]])
-17:19:32.013 INFO - Done: [find element: By.cssSelector: input[type=text]]
-17:19:32.015 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on XP (a9c12422f66a95bee3d489b1004d716f)] -> css selector: input[type=text]], [4, 5, 6, 1, 2]])
-17:19:32.058 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on XP (a9c12422f66a95bee3d489b1004d716f)] -> css selector: input[type=text]], [4, 5, 6, 1, 2]]
-17:19:32.063 INFO - Executing: [find elements: By.cssSelector: .author_search_det])
-17:19:32.077 INFO - Done: [find elements: By.cssSelector: .author_search_det]
-17:19:33.081 INFO - Executing: [delete session: 70facf84-1cba-4b4d-8e66-84e3361803db])
-17:19:33.730 INFO - Done: [delete session: 70facf84-1cba-4b4d-8e66-84e3361803db]
+20:03:27.400 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Author Search, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+20:03:27.400 INFO - Executing: [get: https://umairali17.github.io/Adv-Front-End-Two/src/])
+20:03:27.789 INFO - Done: [get: https://umairali17.github.io/Adv-Front-End-Two/src/]
+20:03:27.792 INFO - Executing: [find elements: By.cssSelector: body])
+20:03:27.811 INFO - Done: [find elements: By.cssSelector: body]
+20:03:27.813 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (3b4bfba586e9e14adf40c603746139fd)] -> css selector: body]])
+20:03:27.827 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (3b4bfba586e9e14adf40c603746139fd)] -> css selector: body]]
+20:03:27.830 INFO - Executing: [find element: By.cssSelector: input[type=text]])
+20:03:27.846 INFO - Done: [find element: By.cssSelector: input[type=text]]
+20:03:27.849 INFO - Executing: [is displayed: 1 [[ChromeDriver: chrome on XP (3b4bfba586e9e14adf40c603746139fd)] -> css selector: input[type=text]]])
+20:03:27.851 INFO - Done: [is displayed: 1 [[ChromeDriver: chrome on XP (3b4bfba586e9e14adf40c603746139fd)] -> css selector: input[type=text]]]
+20:03:27.867 INFO - Executing: [find element: By.cssSelector: input[type=text]])
+20:03:27.867 INFO - Done: [find element: By.cssSelector: input[type=text]]
+20:03:27.867 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on XP (3b4bfba586e9e14adf40c603746139fd)] -> css selector: input[type=text]], [4, 5, 6, 1, 2]])
+20:03:27.914 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on XP (3b4bfba586e9e14adf40c603746139fd)] -> css selector: input[type=text]], [4, 5, 6, 1, 2]]
+20:03:27.920 INFO - Executing: [find elements: By.cssSelector: .author_search_det])
+20:03:27.934 INFO - Done: [find elements: By.cssSelector: .author_search_det]
+20:03:28.945 INFO - Executing: [delete session: 5267e23f-eb2e-44d7-8515-d5e5594b816f])
+20:03:29.646 INFO - Done: [delete session: 5267e23f-eb2e-44d7-8515-d5e5594b816f]

@@ -5,9 +5,9 @@
 
   <testsuite name="authorSearch"
     errors="0" failures="0" hostname="" id="" package="authorSearch" skipped="0"
-    tests="4" time="17.08" timestamp="Thu, 30 Mar 2017 16:19:16 GMT">
+    tests="4" time="18.61" timestamp="Fri, 31 Mar 2017 19:03:10 GMT">
   
-    <testcase name="Test Author Search With Valid Input" classname="authorSearch" time="5.128" assertions="4">
+    <testcase name="Test Author Search With Valid Input" classname="authorSearch" time="6.001" assertions="4">
 
     
 
@@ -18,7 +18,7 @@
     
     </testcase>
   
-    <testcase name="Test Author Search with Valid Input but no Author Stored" classname="authorSearch" time="3.988" assertions="3">
+    <testcase name="Test Author Search with Valid Input but no Author Stored" classname="authorSearch" time="4.328" assertions="3">
 
     
 
@@ -27,7 +27,7 @@
     
     </testcase>
   
-    <testcase name="Test Author Search with No Input" classname="authorSearch" time="4.005" assertions="3">
+    <testcase name="Test Author Search with No Input" classname="authorSearch" time="4.146" assertions="3">
 
     
 
@@ -36,7 +36,7 @@
     
     </testcase>
   
-    <testcase name="Test Author Search with Invalid Input" classname="authorSearch" time="3.959" assertions="3">
+    <testcase name="Test Author Search with Invalid Input" classname="authorSearch" time="4.137" assertions="3">
 
     
 
